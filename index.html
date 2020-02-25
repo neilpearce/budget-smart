@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Budget Calculator</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="js/app.js" defer></script>
+    <!-- <script src="js/app.js" async defer></script> -->
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <header class="header">
+                    <div class="header__logo">
+                        <img src="imgs/Logo.svg" alt="budget smart logo">
+                    </div>
+                </header>
+            </div>
+        </div>
+    </div>
+
+    <div class="container topSection">
+        <div class="row">
+            <div class="col-lg-6">
+                <section class="topSectionText">
+                    
+                    <h1 class="topSectionText__title">Plan Your Budget <span class="orange">Smarter</span></h1>
+                    <p class="topSectionText__body">It’s easy to get stuck in a cycle with your finances. It could be running out of
+                        money at the end of every month, not knowing how or where to invest,
+                        or just leaving your money in investments that aren’t right for you.</p>
+                    <p class="topSectionText__body">Be smart with your money and use the budget planner below to plan your budget and
+                        manage your expenses. </p>
+                </section>               
+            </div>
+            <div class="col-lg-6">
+                <section class="topSectionImage">
+                    <img class="illustration__image" src="imgs/Illustraton.svg" alt="Top Illustraton">
+                </section>
+            </div>
+        </div>
+    </div><!-- END topSection -->
+    <hr />
+
+
+    <div class="container bottomSec">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="botSection-form mb50">
+                    <!-- Expense Form -->
+                    <form id="form" class="form expense-form botSection-form--bottom mb20">
+                        <input type="text" class="expense-input" id="text" placeholder="What is your expense"><br/>
+                        <input type="number" class="expense-input" id="amount" placeholder="Enter your expense amount"><br/>
+                        <button class="btn">Add Expense</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <h1 id="balance">Your Balance: <span class="orange">£0.00</span></h1>
+                <br>
+                <!-- <ul class="budget-tabs">
+                    <li><a href="#"><button class="btn">Daily</button></a></li>
+                    <li><a href="#"><button class="btn">Monthly</button class="btn"></a></li>
+                    <li><a href="#"><button class="btn">Yearly</button class="btn"></a></li>
+                </ul> -->
+
+                <!-- Results -->
+                <section class="results card">
+                    <div class="col-md-12">
+                        <!-- app info -->
+                        <div class="row">                            
+                            <div class="col-6 text-center">
+                                <img class="results__icon results--budget" src="imgs/bal-icon.svg" alt="budget icon">
+                                <h6 class="text-uppercase info-title">Income</h6>
+                                <h4 class="text-uppercase mt-2 budget" id="budget">
+                                <span id="money-plus" class="money plus">+£0.00</span></h4>
+                            </div>
+                            <div class="col-6 text-center">
+                                <img class="results__icon results--expense" src="imgs/money-icon01.svg" alt="budget icon">
+                                <h6 class="text-uppercase info-title">Expense</h6>                                
+                                <h4 class="text-uppercase mt-2 expense" id="expense">
+                                <span id="money-minus" class="money minus">-£0.00</span></h4>
+                            </div>
+                        </div>
+                    </div> 
+                </section> 
+                <!--/ END results  //-->
+
+                <h1 class="mt30">History</h1>
+                <!-- History -->
+                <section class="results card">
+                    <div class="col-md-12">
+                        <!-- app info -->
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <ul id="list" class="list">
+                                    <!-- <li class="minus">Cash <span>-£400</span> <button class="delete-btn">+</button></li> -->
+                                </ul>
+                            </div>
+                            <div class="col-6 text-center">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/ END History  //-->
+            </div>
+        </div><!-- END container  -->
+        <hr/>
+
+        <footer class="footer">
+            <p class="copyright">&copy; copyright 2020 - Neil Pearce</p>
+        </footer>
+
+    </body>
+</html>
